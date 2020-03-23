@@ -81,7 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <a href="redirect/facebook">
+                        login with fb
+                    </a>
                 </div>
 
                 <div class="links">

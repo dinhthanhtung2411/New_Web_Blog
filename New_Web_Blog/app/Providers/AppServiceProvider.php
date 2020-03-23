@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Contract\User\UserRepositoryInterface;
+use App\Contract\User\UserServiceInterface;
+use App\Http\Repository\UserRepository;
+use App\Http\Service\UserService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->singleton(UserRepositoryInterface::class,UserRepository::class);
+        $this->app->singleton(UserServiceInterface::class,UserService::class);
     }
 }
